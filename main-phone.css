@@ -1,0 +1,187 @@
+@media only screen and (max-width: 600px) {
+    html {
+        font-size:50%;
+    }
+    
+    body {
+        padding: 2rem;
+        background: var(--dark);
+        color: #fff;
+    }
+    
+    .border-gradient {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem;
+        width: 100%;
+        min-width: 23rem;
+        height: fit-content;
+        border: 1rem solid transparent;
+        border-radius: 5rem;
+        background: 
+                    linear-gradient(to right, var(--dark), var(--dark)), 
+                    linear-gradient(to right, var(--pink), var(--purple));
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+    
+        /* border-image: linear-gradient(to right, darkblue darkorchid);
+        border-width: 2rem;
+        border-style: solid; */
+    }
+    
+    header {
+        width: 100%;
+        height: fit-content;
+        margin: 0 auto;
+    }
+    
+    header h1 {
+        font-size: 4rem;
+        text-align: center;
+        padding: 0 1rem 2rem 1rem;
+    }
+    
+    #task-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        width: 100%;
+    }
+    
+    input, button {
+        appearance: none;
+        border: none;
+        outline: none;
+        background: none;
+    }
+    
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover, 
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+        font-family: inherit;
+        -webkit-text-fill-color: var(--gray);
+        transition: background-color 5000s ease-in-out;
+    }
+    
+    #task-input {
+        min-width: 100%;
+        background-color: var(--darker);
+        color: var(--light);
+        text-transform: uppercase;
+        padding: 1rem;
+        margin: 0;
+        border-radius: 1rem;
+        font-size: 2.5rem;
+    }
+    
+    #task-input::placeholder {
+        color: var(--gray);
+    }
+    
+    #task-submit {
+        margin-top: 1rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--pink);
+        background-image: linear-gradient(to right bottom, var(--pink), var(--purple));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    #task-submit:hover {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+    
+    #task-submit:active {
+        opacity: 0.6;
+    }
+    
+    main {
+        flex: 1 1 0%;
+        min-width: 15rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    #task-list {
+        padding: 2rem 0;
+    }
+    
+    #task-list h2 {
+        font-size: 3rem;
+        font-weight: 400;
+        color: var(--gray);
+        margin-bottom: 1rem;
+    }
+    
+    #tasks .task {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: var(--light);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 1rem;   
+    }
+    
+    #tasks .task .content {
+        transform: translateY(2px);
+        padding-right: 0;
+    }
+    
+    #tasks .task .content .text {
+        color: var(--darkest);
+        font-size: 2rem;
+        font-weight: 400;
+        width: 100%;
+        display: block;
+        transition: 0.5s;
+        text-transform: uppercase;
+    }
+    
+    #tasks .task .content .text:not(:read-only) {
+        color: var(--pink);
+    }
+    
+    #tasks .task .actions {
+        display: flex;
+        align-content: space-around;
+        align-self: flex-end;
+        margin: 2rem -0.5rem 0 -0.5rem;
+    }
+    
+    #tasks .task .actions button {
+        cursor: pointer;
+        margin: 0 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: .5s;
+        backface-visibility: hidden;
+    }
+    
+    #tasks .task .actions button:hover {
+        opacity: 0.8;
+        transform: scale(1.2);
+    }
+    
+    #tasks .task .actions button:active {
+        opacity: 0.6;
+    }
+    
+    #tasks .task .actions .edit:hover {
+        color: var(--light-green);
+    }
+    
+    #tasks .task .actions .delete:hover {
+        color: var(--light-red);
+    }
+}
