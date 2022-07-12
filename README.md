@@ -7,3 +7,7 @@ It's simply TODO List created for training skills in HTML, CSS, and JS. It's res
 - HTML
 - CSS
 - JavaScript
+ 
+ ### DEMO
+ ---------------
+ - https://somfink.github.io/TODO-List/
